@@ -2,3 +2,9 @@ fastapi
 uvicorn
 python-dotenv
 pydantic
+python-multipart
+pydantic-settings
+pillow
+numpy
+mediapipe
+opencv-python
