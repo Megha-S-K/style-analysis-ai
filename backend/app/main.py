@@ -4,6 +4,7 @@ from app.core.config import settings
 from app.api.health import router as health_router
 from app.api.preprocess import router as preprocess_router
 from app.api.pose import router as pose_router
+from app.api.measurements import router as measurements_router
 
 app = FastAPI(
     title=settings.APP_NAME,
@@ -33,5 +34,11 @@ app.include_router(
     pose_router,
     prefix=settings.API_V1_PREFIX,
     tags=["Pose"]
+)
+
+app.include_router(
+    measurements_router,
+    prefix=settings.API_V1_PREFIX,
+    tags=["Measurements"]
 )
 
